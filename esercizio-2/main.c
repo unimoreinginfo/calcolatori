@@ -19,10 +19,10 @@ int main() {
 		*/
 
 		mov ebx, p
-		mov esi, 1
+		mov esi, 4
 
 		sub byte ptr[ebx], 32;
-		sub byte ptr[ebx + esi * 4], 32
+		sub byte ptr[ebx + esi * 1], 32
 
 	}
 
