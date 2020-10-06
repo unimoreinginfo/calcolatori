@@ -8,6 +8,10 @@ int main() {
 	int vect[5] = { 1, 2, 3, 4, 5 };
 
 	p = &vect[0]; // p corrisponde all'indirizzo del primo elemento del vettore
+	
+	/*
+		consegna: leggere il valore all'indice 1 e il valore all'indice 4
+	*/
 
 	__asm {
 
