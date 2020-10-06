@@ -13,11 +13,6 @@ int main() {
 
 	__asm {
 
-		/*
-			leggo gli elementi di posizione 0 e 4 del vettore e li sommo.
-			tutto fatto tramite indirizzamento base + indice * scala
-		*/
-
 		mov ebx, p
 		mov esi, 1
 
