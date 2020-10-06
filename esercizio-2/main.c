@@ -13,10 +13,18 @@ int main() {
 
 	__asm {
 
+		/*
+			leggo gli elementi di posizione 0 e 4 del vettore e li sommo.
+			tutto fatto tramite indirizzamento base + indice * scala
+		*/
+
 		mov ebx, p
+		mov esi, 0
+
+		sub byte ptr[ebx + esi], 32
+
 		mov esi, 4
 
-		sub byte ptr[ebx], 32;
 		sub byte ptr[ebx + esi * 1], 32
 
 	}
