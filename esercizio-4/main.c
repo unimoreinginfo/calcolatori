@@ -3,7 +3,7 @@
 
 int main() {
 
-	int a = 5, b = -7, c;
+	int a = -5, b = 7, c;
 
 
 	/*
@@ -28,7 +28,7 @@ int main() {
 		start:
 			cmp ebx, 0
 			je end 
-			add edx, a
+			add edx, eax
 			sub ebx, 1
 			jmp start
 
@@ -46,6 +46,8 @@ int main() {
 
 		end: 
 			cmp ecx, 1
+			je negate_one_more_time
+			cmp ecx, 2
 			je negate_one_more_time
 			come_here:
 			mov c, edx
