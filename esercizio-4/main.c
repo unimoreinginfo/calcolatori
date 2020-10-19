@@ -47,8 +47,6 @@ int main() {
 		end: 
 			cmp ecx, 1
 			je negate_one_more_time
-			cmp ecx, 2
-			je negate_one_more_time
 			come_here:
 			mov c, edx
 
