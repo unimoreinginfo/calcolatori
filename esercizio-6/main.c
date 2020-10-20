@@ -21,9 +21,13 @@ int main(void) {
 	je incrementa
 	cmp bl, 'e'
 	je incrementa
-	cmp bl, 'E'
+	cmp bl, 'E'    
 	je incrementa
-	cmp bl, 'o'
+    cmp bl, 'i'
+	je incrementa
+	cmp bl, 'I'
+	je incrementa
+    cmp bl, 'o'
 	je incrementa
 	cmp bl, 'O'
 	je incrementa
