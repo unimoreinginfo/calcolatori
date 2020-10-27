@@ -16,8 +16,7 @@ __declspec(naked) int sommavett(char* v, int len) {
 		push ecx
 
 		mov esi, 0 // 00000000 00000000 00000000 00000000 
-		mov edi, 0  // 00000000 00000000 00000000 00000000 
-		mov eax, 0 // 00000000 00000000 00000000 00000000 
+		mov eax, 0
 		mov ecx, dword ptr[ebp + 8] // ci mettiamo il primo indirizzo
 		mov ebx, dword ptr[ebp + 12] // la lunghezza del nostro vettore
 
@@ -26,14 +25,11 @@ __declspec(naked) int sommavett(char* v, int len) {
 			cmp ebx, esi
 			jz done
 			add al, byte ptr[ecx + esi * 1]
-			add edi, eax
-			mov eax, 0
 			inc esi
 
 		jmp wh
 		
 		done:
-			mov eax, edi
 			pop ecx
 			pop ebx
 			pop esi
