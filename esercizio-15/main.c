@@ -13,9 +13,8 @@ __declspec(naked) int atoi(char *str) {
 		mov ecx, 0 // len
 		mov edx, 0
 		mov esi, 0
-		mov edi, 1 // fattore moltiplicazione, in realtà usiamo solo di
+		mov edi, 1 
 
-		// troviamo la lunghezza
 		ciclolen:
 		mov dl, byte ptr [ebx+esi]
 		cmp dl, 0
@@ -30,16 +29,17 @@ __declspec(naked) int atoi(char *str) {
 		ciclo:
 		cmp esi, 0
 		jl fineciclo
+		mov eax, 0
 		mov al, byte ptr [ebx+esi]
-		sub al, '0'
-		mul di
+		sub eax, '0'
+		mul edi
 		pop edx
-		add dx, ax
+		add edx, eax
 		push edx
 		mov ax, di
 		mov ecx, 10
-		mul cl
-		mov di, ax
+		mul ecx
+		mov edi, eax
 		dec esi
 		jmp ciclo
 		fineciclo:
@@ -58,6 +58,6 @@ __declspec(naked) int atoi(char *str) {
 }
 
 int main() {
-	char v[255] = "123";
+	char v[255] = "25999";
 	printf("Il numero e' %d", atoi(v));
 }
