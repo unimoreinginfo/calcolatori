@@ -20,7 +20,7 @@ __declspec(naked) int pari(int *v, int lunghezza) {
 		je fine
 		mov eax, dword ptr [ebx+esi*4]
 		and eax, 1
-		cmp eax, 0
+		cmp eax, 1
 		je fineciclo
 		inc edx
 		fineciclo:
@@ -41,6 +41,6 @@ __declspec(naked) int pari(int *v, int lunghezza) {
 }
 
 int main() {
-	int v[10] = { 1,2,3,4,5,6,7,8,9,10 };
+	int v[10] = { 12,2,3,4,5,6,7,8,9,10 };
 	printf("Ci sono %d numeri pari", pari(v, 10));
 }
