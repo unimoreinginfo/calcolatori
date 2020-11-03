@@ -22,7 +22,7 @@ __declspec(naked) int media(int *v, int lunghezza) {
 		jmp ciclo
 		dividi:
 		cdq
-		div ecx
+		idiv ecx
 
 		pop ecx
 		pop ebx
