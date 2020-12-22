@@ -17,9 +17,9 @@ _elimina_doppie proc
 	mov edx, 0 ; carattere corrente
 	mov esi, 0
 
-	; La funzione deve cercare nella stringa str quante volte “lettera” compare come doppia nella stringa str. 
-	; Le coppie (esatte ovvero non triple, quadruple ecc…) “lettera” in str devono quindi essere sovrascritte da due spazi. 
-	; La funzione ritorna il numero di coppie esatte di “lettera” in str.
+	; La funzione deve cercare nella stringa str quante volte il carattere passato compare come doppia nella stringa str. 
+	; Le coppie (esatte ovvero non triple, quadruple ecc…) in str devono quindi essere sovrascritte da due spazi. 
+	; La funzione ritorna il numero di coppie esatte del carattere in str.
 
 	cycle: 
 		cmp byte ptr[eax + esi * 1], 0 ; stringa terminata?
